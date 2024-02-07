@@ -1,6 +1,9 @@
 # set to superior editing mode
 set -o vi
 
+# paths
+export PATH="~/go/bin:$PATH"
+
 # keybindings
 bind -x '"\C-l":clear'
 
@@ -13,9 +16,12 @@ PS1='\[\e[35m\]\W\[\e[0m\]$(__git_ps1 "(%s)")\$ '
 
 # aliases
 
-alias v=vim
+alias v=nvim
+alias t=tmux
 
+# directories
 alias ..="cd .."
+alias wp="cd ~/Workspace/"
 
 # ls
 alias ls="ls -a --color=auto"
@@ -33,18 +39,16 @@ alias gp="git pull"
 alias gco="git checkout"
 alias gl="git log"
 alias glg="git log --stat"
+alias lg="lazygit"
 
 # brew
-if type brew &>/dev/null
-then
-  HOMEBREW_PREFIX="$(brew --prefix)"
-  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
-  then
-    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-  else
-    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
-    do
-      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-    done
-  fi
+if type brew &>/dev/null; then
+	HOMEBREW_PREFIX="$(brew --prefix)"
+	if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+		source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+	else
+		for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+			[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+		done
+	fi
 fi
