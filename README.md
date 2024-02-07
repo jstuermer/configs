@@ -22,7 +22,7 @@ brew install bash
 chsh -s /opt/homebrew/bin/bash
 ```
 
-Install `fzf`
+Install fzf
 ```
 brew install fzf
 $(brew --prefix)/opt/fzf/install
@@ -33,3 +33,5 @@ Install tmux
 ```
 brew install tmux
 ```
+
+Install neovim and lazyvim
