@@ -2,7 +2,9 @@
 set -o vi
 
 # paths
-export PATH="~/go/bin:$PATH"
+# export PATH="~/go/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # keybindings
 bind -x '"\C-l":clear'
@@ -12,16 +14,17 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
-PS1='\[\e[35m\]\W\[\e[0m\]$(__git_ps1 "(%s)")\$ '
+PS1='\[\e[35m\]\w\[\e[0m\]$(__git_ps1 "(%s)")\$ '
 
 # aliases
 
-alias v=nvim
+alias nv=nvim
 alias t=tmux
+alias cht=~/.local/scripts/tmux-cht.sh
 
 # directories
 alias ..="cd .."
-alias wp="cd ~/Workspace/"
+alias ws="cd ~/Workspace/"
 
 # ls
 alias ls="ls -a --color=auto"
@@ -40,6 +43,16 @@ alias gco="git checkout"
 alias gl="git log"
 alias glg="git log --stat"
 alias lg="lazygit"
+
+# nix
+export PATH="$PATH:/nix/var/nix/profiles/default/bin"
+alias nrn="nix repl --file '<nixpkgs>'"
+alias nspr="nix-shell --pure release.nix"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # brew
 if type brew &>/dev/null; then
