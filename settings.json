@@ -189,13 +189,6 @@
     ],
     "vim.smartRelativeLine": true,
     "vim.useSystemClipboard": true,
-    "window.commandCenter": false,
-    "window.titleBarStyle": "custom",
-    "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.editor.wrapTabs": true,
-    "workbench.layoutControl.enabled": false,
-    "yaml.format.enable": false,
     "vim.visualModeKeyBindings": [
         {
             "before": [
@@ -206,5 +199,12 @@
                 "editor.action.smartSelect.expand"
             ]
         }
-    ]
+    ],
+    "window.commandCenter": false,
+    "window.titleBarStyle": "custom",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.editor.wrapTabs": true,
+    "workbench.layoutControl.enabled": false,
+    "yaml.format.enable": false
 }
