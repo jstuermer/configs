@@ -5,7 +5,7 @@ Configuration files for bash, vim, tmux and others. Described setup is meant for
 
 Download config files to the following directories:
 ```
-~/.config/alacritty/alacritty.toml`
+~/.config/alacritty/alacritty.toml
 ~/.bashrc
 ~/.bash_profile
 ~/.tmux.conf
