@@ -1,0 +1,28 @@
+[user]
+	name = Julian Stürmer
+	email = 18049549+jstuermer@users.noreply.github.com
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rerere]
+	enabled = true 
+[core]
+	editor = code --wait
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[color]
+	diff = auto 
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
