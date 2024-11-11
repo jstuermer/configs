@@ -3,35 +3,19 @@ Configuration files for bash, vim, tmux and others. Described setup is meant for
 
 ## Setup
 
-Download config files to the following directories:
+1. Install Apple's command line tools (required by Git and Homebrew)
 ```
-~/.config/alacritty/alacritty.toml
-~/.bashrc
-~/.bash_profile
-~/.tmux.conf
+xcode-select --install
 ```
 
-Install Alacritty
+2. Clone this repository and change to its directory.
+
+3. Install software using the Brewfile
 ```
-brew install --cask alacritty
+brew bundle --file Brewfile
 ```
 
-Install and use newest version of bash since it is deprecated on MacOS
+4. Create symlinks in home directory using [GNU Stow](https://www.gnu.org/software/stow/)
 ```
-brew install bash
-chsh -s /opt/homebrew/bin/bash
+stow .
 ```
-
-Install fzf
-```
-brew install fzf
-$(brew --prefix)/opt/fzf/install
-```
-Make sure that `~/.fzf.bash` exists.
-
-Install tmux
-```
-brew install tmux
-```
-
-Install neovim and lazyvim
