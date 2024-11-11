@@ -17,5 +17,7 @@ brew bundle --file Brewfile
 
 4. Create symlinks in home directory using [GNU Stow](https://www.gnu.org/software/stow/)
 ```
-stow .
+stow . -t ~/
 ```
+To preview what `stow` would do run `stow . -t ~/ -vv -n`. To update the dotfiles in this repository
+using local ones run `stow . -t ~/ --adopt`.
