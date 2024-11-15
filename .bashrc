@@ -38,7 +38,7 @@ alias gf="git fetch"
 alias gp="git pull"
 alias gco="git checkout"
 alias gl="git log"
-alias glg="git log --stat"
+alias glos="git log --oneline --stat"
 alias lg="lazygit"
 
 # nix
